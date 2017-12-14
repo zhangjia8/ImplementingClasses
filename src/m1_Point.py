@@ -55,7 +55,7 @@ class Point(object):
         self.d = 0
 
     def __repr__(self):
-        return 'Point({},{})'.format(self.x, self.y)
+        return 'Point({}, {})'.format(self.x, self.y)
 
     def clone(self):
         return Point(self.x, self.y)
@@ -67,7 +67,7 @@ class Point(object):
         self.move += 1
 
     def move_by(self, dx, dy):
-        self.d = (dx**2 + dy**2)**0.5 +self.d
+        self.d = (dx**2 + dy**2)**0.5 + self.d
         self.x = self.x + dx
         self.y = self.y + dy
         self.move += 1
@@ -324,26 +324,26 @@ def run_test_clone():
     print('-----------------------------------------------------------')
     p1 = Point(10, 8)
     print()
-    print('Expected for p1: Point(10,8)')
+    print('Expected for p1: Point(10, 8)')
     print('Actual for p1:  ', p1)
 
     p2 = p1.clone()
     p3 = p2.clone()
     print()
-    print('Expected for p1: Point(10,8)')
+    print('Expected for p1: Point(10, 8)')
     print('Actual for p1:  ', p1)
-    print('Expected for p2: Point(10,8)')
+    print('Expected for p2: Point(10, 8)')
     print('Actual for p2:  ', p2)
-    print('Expected for p3: Point(10,8)')
+    print('Expected for p3: Point(10, 8)')
     print('Actual for p3:  ', p3)
 
     p1.x = 999
     print()
-    print('Expected for p1: Point(999,8)')
+    print('Expected for p1: Point(999, 8)')
     print('Actual for p1:  ', p1)
-    print('Expected for p2: Point(10,8)')
+    print('Expected for p2: Point(10, 8)')
     print('Actual for p2:  ', p2)
-    print('Expected for p3: Point(10,8)')
+    print('Expected for p3: Point(10, 8)')
     print('Actual for p3:  ', p3)
 
     p1.y = 333
@@ -351,11 +351,11 @@ def run_test_clone():
     p3.x = 777
     p3.y = 555
     print()
-    print('Expected for p1: Point(999,333)')
+    print('Expected for p1: Point(999, 333)')
     print('Actual for p1:  ', p1)
-    print('Expected for p2: Point(11,22)')
+    print('Expected for p2: Point(11, 22)')
     print('Actual for p2:  ', p2)
-    print('Expected for p3: Point(777,555)')
+    print('Expected for p3: Point(777, 555)')
     print('Actual for p3:  ', p3)
 
 
