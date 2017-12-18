@@ -61,7 +61,7 @@ class Point(object):
         return Point(self.x, self.y)
 
     def move_to(self, x, y):
-        self.d = self.d + ((y - self.y)**2 + (x - self.x))**0.5
+        self.d = self.d + ((y - self.y)**2 + (x - self.x)**2)**0.5
         self.x = x
         self.y = y
         self.move += 1
